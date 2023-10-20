@@ -23,7 +23,8 @@ app.use(helmet())
 
 app.use(router)
 
-
+app.use(notFound)
+app.use(errorHandler)
 
 app.listen(port, () => 
   logger.info(`Application started at http://localhost:${process.env.PORT}`)
