@@ -16,7 +16,7 @@ const app = express()
 
 app.use(
   basicAuth({
-    users: { admin: process.env.ADMIN_PASSWORD },
+    users: { [process.env.ADMIN_USER]: admin: process.env.ADMIN_PASSWORD },
   }))
 
 
